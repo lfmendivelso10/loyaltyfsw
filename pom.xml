@@ -142,7 +142,8 @@
             <version>4.3.6.Final</version>
         </dependency>
 
--->        <dependency>
+        -->        
+        <dependency>
             <groupId>javassist</groupId>
             <artifactId>javassist</artifactId>
             <version>3.12.1.GA</version>
@@ -155,16 +156,16 @@
                 </dependency>  -->       
                                    
         <dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>persistence-api</artifactId>
-			<version>1.0-rev-1</version>
-	</dependency>
-	<dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>eclipselink</artifactId>
-			<version>2.5.0</version>
-			<type>jar</type>
-	</dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0-rev-1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>2.5.0</version>
+            <type>jar</type>
+        </dependency>
         
         <dependency>
             <groupId>com.github.jsimone</groupId>
@@ -179,15 +180,15 @@
             <type>jar</type>
         </dependency>
         <dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-servlet</artifactId>
-			<version>1.13</version>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-json</artifactId>
-			<version>1.13</version>
-		</dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-servlet</artifactId>
+            <version>1.13</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-json</artifactId>
+            <version>1.13</version>
+        </dependency>
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-client</artifactId>
@@ -207,26 +208,26 @@
     <build>
        
         <plugins>
-<!--         <plugin>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-maven-plugin</artifactId>
-            <version>9.1.5.v20140505</version>
-            <configuration>
-                <stopPort>9966</stopPort>
-                <stopKey>jetty-stop</stopKey>
-                <scanIntervalSeconds>5</scanIntervalSeconds>
-                <port>8088</port>
-                <contextXml>src/main/webapp/WEB-INF/jetty-web.xml</contextXml>
-                <contextHandlers>
-                    <contextHandler implementation="org.eclipse.jetty.maven.plugin.JettyWebAppContext">
-                      <war>C:\Users\Jj.alarcon10\Documents\NetBeansProjects\Rest1\crudmaker.web\target\crudmaker.web-1.1.5.war</war>
-                      <contextPath>/crudmaker</contextPath>
-                    </contextHandler>
-                </contextHandlers>
-            </configuration>
-            </plugin>  
-        -->
-        <plugin>
+            <!--         <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.1.5.v20140505</version>
+                <configuration>
+                    <stopPort>9966</stopPort>
+                    <stopKey>jetty-stop</stopKey>
+                    <scanIntervalSeconds>5</scanIntervalSeconds>
+                    <port>8088</port>
+                    <contextXml>src/main/webapp/WEB-INF/jetty-web.xml</contextXml>
+                    <contextHandlers>
+                        <contextHandler implementation="org.eclipse.jetty.maven.plugin.JettyWebAppContext">
+                          <war>C:\Users\Jj.alarcon10\Documents\NetBeansProjects\Rest1\crudmaker.web\target\crudmaker.web-1.1.5.war</war>
+                          <contextPath>/crudmaker</contextPath>
+                        </contextHandler>
+                    </contextHandlers>
+                </configuration>
+                </plugin>  
+            -->
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.2</version>
@@ -237,29 +238,31 @@
                 </configuration>
             </plugin>    
             
-        <plugin>
+            <plugin>
           
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <version>2.3</version>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals><goal>copy</goal></goals>
-                    <configuration>
-                        <artifactItems>
-                            <artifactItem>
-                                <groupId>com.github.jsimone</groupId>
-                                <artifactId>webapp-runner</artifactId>
-                                <version>7.0.40.0</version>
-                                <destFileName>webapp-runner.jar</destFileName>
-                            </artifactItem>
-                        </artifactItems>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>    
-            </plugins>
-   </build> 
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.github.jsimone</groupId>
+                                    <artifactId>webapp-runner</artifactId>
+                                    <version>7.0.40.0</version>
+                                    <destFileName>webapp-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>    
+        </plugins>
+    </build> 
 
 </project>
